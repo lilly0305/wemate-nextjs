@@ -2,32 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
-/*:root {*/
-/*  --foreground-rgb: 0, 0, 0;*/
-/*  --background-start-rgb: 214, 219, 220;*/
-/*  --background-end-rgb: 255, 255, 255;*/
-/*}*/
+:root {
+  --foreground-rgb: 0, 0, 0;
+}
 
-/*@media (prefers-color-scheme: dark) {*/
-/*  :root {*/
-/*    --foreground-rgb: 255, 255, 255;*/
-/*    --background-start-rgb: 0, 0, 0;*/
-/*    --background-end-rgb: 0, 0, 0;*/
-/*  }*/
-/*}*/
+@media (prefers-color-scheme: dark) {
+  /* 다크 모드 스타일링 */
+  :root {
+    --foreground-rgb: 255, 255, 255;
+  }
+}
 
-/*body {*/
-/*  color: rgb(var(--foreground-rgb));*/
-/*  background: linear-gradient(*/
-/*      to bottom,*/
-/*      transparent,*/
-/*      rgb(var(--background-end-rgb))*/
-/*    )*/
-/*    rgb(var(--background-start-rgb));*/
-/*}*/
+body {
+  color: rgb(var(--foreground-rgb));
+}
 
-/*@layer utilities {*/
-/*  .text-balance {*/
-/*    text-wrap: balance;*/
-/*  }*/
-/*}*/
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* NOTE: 공통 */
+@layer components {
+  .flexCenterBetween {
+    @apply flex items-center justify-between
+  }
+
+  .flexCenter {
+    @apply flex items-center justify-center
+  }
+
+  .marginCenter {
+    @apply mx-auto my-0
+  }
+}
+
